@@ -12,9 +12,9 @@
     <span class="header-name">Mason & Jordan Smith</span>
     <span class="header-date">July 6, 2019</span>
 </div>
-<div content="content">
-    <h3 th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}"/>
-    <table>
+
+<div class="table">
+    <table id="imagesTable">
         <thead>
         <tr>
             <th>Images</th>
@@ -22,7 +22,7 @@
         </thead>
         <tbody>
         <tr th:each="image : ${page.content}">
-            <td>
+            <td th:align="center">
                 <a th:href="@{'/images/' + ${image.name} + '/raw'}">
                     <img class="uploadedImageTile" th:src="@{'/images/' + ${image.name} + '/raw'}"/>
                 </a>
@@ -30,11 +30,15 @@
         </tr>
         </tbody>
     </table>
+</div>
+<h3 th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}" class="page-number"/>
 
-    <form method="post" enctype="multipart/form-data" action="/images/">
+<div class="form">
+    <form id="uploadForm" method="post" enctype="multipart/form-data" action="/images/">
         <span>Upload your image here!</span>
         <p><input type="file" name="file"/><input type="submit" value="Upload"/></p>
     </form>
 </div>
+
 </body>
 </html>
