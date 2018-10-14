@@ -1,9 +1,10 @@
 package com.masonsmith.smithwedding.data;
 
+import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import java.time.OffsetDateTime;
 
 @Entity
@@ -29,6 +30,15 @@ public class Image {
 
     public Image(String name) {
         this.name = name;
+    }
+
+    /**
+     * Auditing methods
+     */
+
+    @PrePersist
+    protected void onCreate() {
+        this.uploadDate = OffsetDateTime.now();
     }
 
     /**
@@ -61,4 +71,5 @@ public class Image {
         this.uploadDate = uploadDate;
         return this;
     }
+
 }
