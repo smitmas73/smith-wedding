@@ -2,10 +2,11 @@ package com.masonsmith.smithwedding.service;
 
 import com.masonsmith.smithwedding.data.Image;
 import com.masonsmith.smithwedding.data.repository.ImageRepository;
-import org.aspectj.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,6 +14,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.OffsetDateTime;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class ImageService {
@@ -37,6 +40,14 @@ public class ImageService {
     }
 
     /**
+     * Find all images and load into one page
+     *
+     */
+    public Page<Image> findPage(Pageable pageable) {
+        return repository.findAll(pageable);
+    }
+
+    /**
      * Find one image from upload directory
      *
      * @param filename file name of image to be found
@@ -54,14 +65,23 @@ public class ImageService {
      */
 
     public void createImage(MultipartFile file) {
+        String fileName = strip(OffsetDateTime.now().toString()) + ".JPG";
         try {
             if (!file.isEmpty()) {
-                Files.copy(file.getInputStream(), Paths.get(UPLOAD_DIRECTORY,
-                        file.getOriginalFilename() + OffsetDateTime.now()));
-                repository.save(new Image(file.getOriginalFilename() + OffsetDateTime.now()));
+                Files.copy(file.getInputStream(), Paths.get(UPLOAD_DIRECTORY, fileName));
+                repository.save(new Image(fileName));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Strip all unwanted chars from file name
+     */
+
+    public String strip(String toStrip) {
+        return toStrip.replaceAll("[^a-zA-Z0-9]+", "");
+    }
+
 }

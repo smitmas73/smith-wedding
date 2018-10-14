@@ -1,0 +1,50 @@
+/* Start styling by class */
+
+.header-name {
+    font-size: 40px;
+    font-variant: small-caps;
+    font-family: "Bradley Hand ITC", cursive;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    /* For center alignment */
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    /**/
+    /* For bottom left alignment *
+    bottom: 8px;
+    left: 16px;
+    /**/
+}
+
+.header-date {
+    font-size: 20px;
+    font-family: "Bradley Hand ITC", cursive;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    /* For center alignment */
+    top: 75%;
+    width: 100%;
+    text-align: center;
+    /**/
+    /* For bottom right alignment *
+    bottom: 8px;
+    right: 16px;
+    /**/
+}
+
+.header {
+    background: url(../img/rose-assortment.png) no-repeat center center;
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    position: relative;
+}
+
+/* End styling by class */
+
+/* Start styling by id */
+
+/* End styling by id */

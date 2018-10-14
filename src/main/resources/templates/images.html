@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Smith Wedding : Images</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/images.css}"/>
+</head>
+<body>
+<h3 th:if="${#vars['flash.message']}" th:text="${#vars['flash.message']}" class="flash-message"></h3>
+<div class="header">
+    <span class="header-name">Mason & Jordan Smith</span>
+    <span class="header-date">July 6, 2019</span>
+</div>
+<div content="content">
+    <h3 th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}"/>
+    <table>
+        <thead>
+        <tr>
+            <th>Images</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="image : ${page.content}">
+            <td>
+                <a th:href="@{'/images/' + ${image.name} + '/raw'}">
+                    <img class="uploadedImageTile" th:src="@{'/images/' + ${image.name} + '/raw'}"/>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form method="post" enctype="multipart/form-data" action="/images/">
+        <span>Upload your image here!</span>
+        <p><input type="file" name="file"/><input type="submit" value="Upload"/></p>
+    </form>
+</div>
+</body>
+</html>

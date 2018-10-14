@@ -1,0 +1,16 @@
+/* Start styling by class */
+
+.flash-message {
+    background-color: #F08080;
+    padding: 1em;
+}
+
+.uploadedImageTile {
+    max-height: 140px;
+}
+
+/* End styling by class */
+
+/* Start styling by id */
+
+/* End styling by id */
