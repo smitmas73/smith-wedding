@@ -1,38 +1,26 @@
 /* Start styling by class */
 
 .header-name {
-    font-size: 40px;
+    font-size: 60px;
     font-variant: small-caps;
     font-family: "Bradley Hand ITC", cursive;
     font-weight: bold;
     color: #FFFFFF;
     position: absolute;
-    /* For center alignment */
-    top: 25%;
+    top: 40%;
     width: 100%;
     text-align: center;
-    /**/
-    /* For bottom left alignment *
-    bottom: 8px;
-    left: 16px;
-    /**/
 }
 
 .header-date {
-    font-size: 22px;
+    font-size: 40px;
     font-family: "Bradley Hand ITC", cursive;
     font-weight: bold;
     color: #FFFFFF;
     position: absolute;
-    /* For center alignment */
-    top: 50%;
+    top: 60%;
     width: 100%;
     text-align: center;
-    /**/
-    /* For bottom right alignment *
-    bottom: 8px;
-    right: 16px;
-    /**/
 }
 
 .header {
