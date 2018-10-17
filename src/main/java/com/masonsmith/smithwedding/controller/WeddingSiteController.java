@@ -61,6 +61,12 @@ public class WeddingSiteController {
     public String images(Model model, Pageable pageable) {
         final Page<Image> page = imageService.findPage(pageable);
         model.addAttribute("page", page);
+        if (page.hasPrevious()) {
+            model.addAttribute("prev", pageable.previousOrFirst());
+        }
+        if (page.hasNext()) {
+            model.addAttribute("next", pageable.next());
+        }
         return "images";
     }
 

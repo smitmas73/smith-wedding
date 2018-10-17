@@ -1,10 +1,15 @@
 /* Start styling by class */
 
+ul {
+    list-style: none;
+}
+
 .header-name {
     font-size: 60px;
     font-variant: small-caps;
-    font-family: "Bradley Hand ITC", cursive;
+    font-family: "Goudy Old Style", cursive;
     font-weight: bold;
+    font-style: italic;
     color: #FFFFFF;
     position: absolute;
     top: 40%;
@@ -14,8 +19,9 @@
 
 .header-date {
     font-size: 40px;
-    font-family: "Bradley Hand ITC", cursive;
+    font-family: "Goudy Old Style", cursive;
     font-weight: bold;
+    font-style: italic;
     color: #FFFFFF;
     position: absolute;
     top: 60%;
