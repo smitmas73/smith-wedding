@@ -7,13 +7,19 @@ h3 {
 }
 
 a {
+    font-size: 36px;
     text-decoration: none;
     color: #2CD8CD;
 }
 
 a:hover {
     text-decoration: none;
-    color: #1D9F97;
+    color: #1A827B;
+}
+
+a:focus {
+    text-decoration: underline;
+    color: #1A827B;
 }
 
 .table {
@@ -63,6 +69,29 @@ a:hover {
     top: 50%;
 }
 
+.uploadButton {
+    padding: 10px;
+    margin-left: 15px;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: #F08080;
+    border: 1px solid #FA2626;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+}
+
+.uploadButton:hover {
+    background: #F93333;
+    border: 1px solid #FD1313;
+    cursor: pointer;
+}
+
+.uploadButton:focus {
+    background: #F93333;
+    border: 1px solid #FD1313;
+    box-shadow: #F08080;
+}
+
 .page-number {
     text-align: center;
     font-family: "Georgia", Serif, fantasy;
@@ -71,10 +100,17 @@ a:hover {
     padding-top: 0.5em;
 }
 
-.prev {
+.navButtons {
+    text-align: center;
 }
 
-.next {
+.navButtons li {
+    display: inline;
+}
+
+.navButtons a {
+    display: inline-block;
+    padding: 20px;
 }
 
 /* End styling by class */
@@ -85,6 +121,31 @@ a:hover {
     width: 100%;
     height: 420px;
     position: absolute;
+}
+
+#uploadImageMessage {
+    font-size: 24px;
+    font-family: "Goudy Old Style", cursive;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+#chooseFileButton {
+    text-space: 2px;
+}
+
+#chooseFileInput {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+}
+
+#chosenFile {
+    font-size: 20px;
+    font-family: "Goudy Old Style", cursive;
+    font-style: italic;
+    margin-left: 15px;
 }
 
 /* End styling by id */

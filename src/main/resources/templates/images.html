@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/images.css}"/>
 </head>
-<body>
+<body onload="getFileName()">
 <h3 th:if="${#vars['flash.message']}" th:text="${#vars['flash.message']}" class="flash-message"></h3>
 <div class="header">
     <span class="header-name">Mason & Jordan Smith</span>
@@ -18,6 +18,9 @@
         <thead>
         <tr class="table-header">
             <th colspan="3">Images</th>
+        </tr>
+        <tr>
+            <th colspan="3" th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}"></th>
         </tr>
         <tr>
             <th colspan="3" th:text="${page.size} + ' image(s) per page'"></th>
@@ -34,23 +37,37 @@
         </tbody>
     </table>
 </div>
-<h3 th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}" class="page-number"/>
 
 <ul class="navButtons">
-    <li class="prev" th:if="${prev}">
-        <a th:href="@{/images/(size=${prev.pageSize},page=${prev.pageNumber})}">PREVIOUS</a>
+    <li th:if="${prev}">
+        <a th:href="@{/images/(size=${prev.pageSize},page=0)}">FIRST</a>
     </li>
-    <li class="next" th:if="${next}">
-        <a th:href="@{/images/(size=${next.pageSize},page=${next.pageNumber})}">NEXT</a>
+    <li th:if="${prev}">
+        <a th:href="@{/images/(size=${prev.pageSize},page=${prev.pageNumber})}"><<</a>
+    </li>
+    <li th:if="${next}">
+        <a th:href="@{/images/(size=${next.pageSize},page=${next.pageNumber})}">>></a>
+    </li>
+    <li th:if="${next}">
+        <a th:href="@{/images/(size=${next.pageSize},page=${page.totalPages - 1})}">LAST</a>
     </li>
 </ul>
 
 <div class="form">
     <form id="uploadForm" method="post" enctype="multipart/form-data" action="/images/">
-        <span>Upload your image here!</span>
-        <p><input type="file" name="file"/><input type="submit" value="Upload"/></p>
+        <span id="uploadImageMessage">Upload your image here!</span>
+        <p>
+            <label id="chooseFileButton" class="uploadButton">Choose a file
+                <input id="chooseFileInput" type="file" name="file" onchange="getFileName()" required/>
+            </label>
+            <input class="uploadButton" type="submit" value="Upload"/>
+        </p>
     </form>
 </div>
+
+<p id="chosenFile"></p>
+
+<script type="text/javascript" th:src="@{/js/images.js}"></script>
 
 </body>
 </html>
