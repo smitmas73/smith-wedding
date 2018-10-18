@@ -6,35 +6,68 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/images.css}"/>
 </head>
-<body>
+<body onload="getFileName()">
 <h3 th:if="${#vars['flash.message']}" th:text="${#vars['flash.message']}" class="flash-message"></h3>
 <div class="header">
     <span class="header-name">Mason & Jordan Smith</span>
     <span class="header-date">July 6, 2019</span>
 </div>
-<div content="content">
-    <h3 th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}"/>
-    <table>
+
+<div class="table">
+    <table id="imagesTable">
         <thead>
+        <tr class="table-header">
+            <th colspan="3">Images</th>
+        </tr>
         <tr>
-            <th>Images</th>
+            <th colspan="3" th:text="'Page ' + ${page.number + 1} + ' of ' + ${page.totalPages}"></th>
+        </tr>
+        <tr>
+            <th colspan="3" th:text="${page.size} + ' image(s) per page'"></th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="image : ${page.content}">
-            <td>
+        <td th:each="image : ${page.content}">
+            <ul th:align="center">
                 <a th:href="@{'/images/' + ${image.name} + '/raw'}">
                     <img class="uploadedImageTile" th:src="@{'/images/' + ${image.name} + '/raw'}"/>
                 </a>
-            </td>
-        </tr>
+            </ul>
+        </td>
         </tbody>
     </table>
+</div>
 
-    <form method="post" enctype="multipart/form-data" action="/images/">
-        <span>Upload your image here!</span>
-        <p><input type="file" name="file"/><input type="submit" value="Upload"/></p>
+<ul class="navButtons">
+    <li th:if="${prev}">
+        <a th:href="@{/images/(size=${prev.pageSize},page=0)}">FIRST</a>
+    </li>
+    <li th:if="${prev}">
+        <a th:href="@{/images/(size=${prev.pageSize},page=${prev.pageNumber})}"><<</a>
+    </li>
+    <li th:if="${next}">
+        <a th:href="@{/images/(size=${next.pageSize},page=${next.pageNumber})}">>></a>
+    </li>
+    <li th:if="${next}">
+        <a th:href="@{/images/(size=${next.pageSize},page=${page.totalPages - 1})}">LAST</a>
+    </li>
+</ul>
+
+<div class="form">
+    <form id="uploadForm" method="post" enctype="multipart/form-data" action="/images/">
+        <span id="uploadImageMessage">Upload your image here!</span>
+        <p>
+            <label id="chooseFileButton" class="uploadButton">Choose a file
+                <input id="chooseFileInput" type="file" name="file" onchange="getFileName()" required/>
+            </label>
+            <input class="uploadButton" type="submit" value="Upload"/>
+        </p>
     </form>
 </div>
+
+<p id="chosenFile"></p>
+
+<script type="text/javascript" th:src="@{/js/images.js}"></script>
+
 </body>
 </html>
