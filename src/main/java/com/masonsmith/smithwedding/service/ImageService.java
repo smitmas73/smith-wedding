@@ -14,8 +14,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.OffsetDateTime;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Service
 public class ImageService {
@@ -80,7 +78,7 @@ public class ImageService {
      * Strip all unwanted chars from file name
      */
 
-    public String strip(String toStrip) {
+    private String strip(String toStrip) {
         return toStrip.replaceAll("[^a-zA-Z0-9]+", "");
     }
 
