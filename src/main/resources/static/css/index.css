@@ -42,6 +42,7 @@
     font-size: 36px;
     text-align: center;
     z-index: 1;
+    cursor: default;
 }
 
 #imageSlider {

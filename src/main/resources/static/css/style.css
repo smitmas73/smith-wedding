@@ -1,7 +1,44 @@
 /* Start styling by class */
 
-ul {
-    list-style: none;
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F08080;
+}
+
+.link-container {
+    float: left;
+}
+
+.link {
+    font-family: "Goudy Old Style", cursive;
+    font-size: 24px;
+    color: #000000;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none !important;
+    -webkit-transition-duration: 0.25s;
+}
+
+.link:hover {
+    background-color: #F93333;
+}
+
+.active {
+    color: #555555;
+}
+
+.nav-message {
+    font-family: "Goudy Old Style", cursive;
+    font-size: 24px;
+    color: #555555;
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+    cursor: default;
 }
 
 .header-name {
@@ -15,6 +52,7 @@ ul {
     top: 40%;
     width: 100%;
     text-align: center;
+    cursor: default;
 }
 
 .header-date {
@@ -27,6 +65,7 @@ ul {
     top: 60%;
     width: 100%;
     text-align: center;
+    cursor: default;
 }
 
 .header {
