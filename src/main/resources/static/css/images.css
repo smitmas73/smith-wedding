@@ -6,6 +6,10 @@ h3 {
     border-bottom: 3px solid #FFFFFF;
 }
 
+tr {
+    cursor: default;
+}
+
 a {
     font-size: 36px;
     text-decoration: none;
@@ -20,6 +24,10 @@ a:hover {
 a:focus {
     text-decoration: underline;
     color: #1A827B;
+}
+
+.navButtons {
+    list-style: none;
 }
 
 .table {
@@ -60,8 +68,9 @@ a:focus {
 }
 
 .flash-message {
-    background-color: #F08080;
+    background-color: #999999;
     padding: 1em;
+    border-bottom: 3px solid #FFFFFF;
 }
 
 .uploadedImageTile {
@@ -129,6 +138,7 @@ a:focus {
     font-style: italic;
     font-weight: bold;
     margin-left: 15px;
+    cursor: default;
 }
 
 #chooseFileButton {
@@ -146,6 +156,7 @@ a:focus {
     font-family: "Goudy Old Style", cursive;
     font-style: italic;
     margin-left: 15px;
+    cursor: default;
 }
 
 /* End styling by id */
