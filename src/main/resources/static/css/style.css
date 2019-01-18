@@ -1,5 +1,9 @@
 /* Start styling by class */
 
+ul {
+    list-style-type: none;
+}
+
 .nav-bar {
     list-style-type: none;
     margin: 0;
@@ -36,8 +40,7 @@
     font-size: 24px;
     color: #555555;
     float: right;
-    margin-top: 15px;
-    margin-right: 15px;
+    margin: 15px 15px 0 0;
     cursor: default;
 }
 
@@ -76,8 +79,100 @@
     position: relative;
 }
 
+.footer {
+    background-color: #aaaaaa;
+    border-radius: 12px;
+    top: 10px;
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px 0;
+}
+
+.contactText {
+    font-size: 18px;
+    font-family: "Goudy Old Style", cursive;
+}
+
+.socialMediaListItem {
+    display: inline;
+    margin: 0 0 0 0;
+}
+
+.socialMediaListItem a {
+    text-decoration: none;
+    width: 30px;
+}
+
+.socialMediaListItem a:hover {
+    text-decoration: none;
+}
+
+.socialMediaListItem a:visited {
+    text-decoration: none;
+}
+
+.socialMediaListItem img:hover {
+    opacity: 0.7;
+}
+
+.fromTheCoupleMsg {
+    font-family: "Goudy Old Style", cursive;
+    font-weight: bold;
+}
+
 /* End styling by class */
 
 /* Start styling by id */
+
+#footerLeft {
+    top: 10px;
+    float: left;
+}
+
+#footerLogoContainer {
+    position: absolute;
+    right: 25%;
+    top: 25%;
+}
+
+#footerLogo {
+    width: 270px;
+    height: 77px;
+}
+
+#contactUsContainer {
+    top: 10px;
+    height: 220px;
+    width: 200px;
+    float: right;
+    margin: 0 15px 0 0;
+    border-left: 6px solid #F08080;
+}
+
+#facebookLinkImg {
+    background: url(../img/facebook.png) no-repeat center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 0 10px;
+}
+
+#twitterLinkImg {
+    background: url(../img/twitter.png) no-repeat center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 0 10px;
+}
+
+#venmoLinkImg {
+    background: url(../img/venmo.jpg) no-repeat center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    margin: 10px 0 0 10px;
+}
 
 /* End styling by id */

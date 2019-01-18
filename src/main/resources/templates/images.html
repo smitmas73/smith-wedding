@@ -40,7 +40,7 @@
         <tbody>
         <td th:each="image : ${page.content}">
             <ul th:align="center">
-                <a th:href="@{'/images/' + ${image.name} + '/raw'}">
+                <a th:href="@{'/images/' + ${image.name} + '/raw'}" target="_blank">
                     <img class="uploadedImageTile" th:src="@{'/images/' + ${image.name} + '/raw'}"/>
                 </a>
             </ul>
@@ -77,6 +77,45 @@
 </div>
 
 <p id="chosenFile"></p>
+
+<div class="footer">
+    <div id="footerLeft">
+        <ul id="footerLeftContents">
+            <li class="fromTheCoupleMsg">From the Couple:</li>
+            <br>
+            <li class="fromTheCoupleMsg">We would like to take this opportunity to thank each</li>
+            <li class="fromTheCoupleMsg">and every one of you for being a part of our journey.</li>
+            <li class="fromTheCoupleMsg">We hope that everyone who attended our wedding had a</li>
+            <li class="fromTheCoupleMsg">great time celebrating with us and would like to thank</li>
+            <li class="fromTheCoupleMsg">you for making our special day of union unforgettable.</li>
+            <br>
+            <li class="fromTheCoupleMsg">With love, Mason and Jordan Smith</li>
+        </ul>
+    </div>
+    <div id="footerLogoContainer">
+        <img id="footerLogo" th:src="@{/img/theSmiths.png}"/>
+    </div>
+    <div id="contactUsContainer" th:align="center">
+        <ul id="contactUsContents">
+            <li class="contactText">smitmas73@gmail.com</li>
+            <li class="socialMediaListItem">
+                <a th:href="'https://www.facebook.com'" target="_blank">
+                    <img id="facebookLinkImg" th:src="@{/img/facebook.png}"/>
+                </a>
+            </li>
+            <li class="socialMediaListItem">
+                <a th:href="'https://www.twitter.com'" target="_blank">
+                    <img id="twitterLinkImg" th:src="@{/img/twitter.png}"/>
+                </a>
+            </li>
+            <li class="socialMediaListItem">
+                <a th:href="'https://venmo.com/Mason-Smith-101'" target="_blank">
+                    <img id="venmoLinkImg" th:src="@{/img/venmo.jpg}"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <script type="text/javascript" th:src="@{/js/images.js}"></script>
 
