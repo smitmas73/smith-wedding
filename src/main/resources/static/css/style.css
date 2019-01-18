@@ -47,7 +47,7 @@ ul {
 .header-name {
     font-size: 60px;
     font-variant: small-caps;
-    font-family: "Goudy Old Style", cursive;
+    font-family: "Goudy Old Style", fantasy;
     font-weight: bold;
     font-style: italic;
     color: #FFFFFF;
@@ -91,7 +91,7 @@ ul {
 
 .contactText {
     font-size: 18px;
-    font-family: "Goudy Old Style", cursive;
+    font-family: "Goudy Old Style", serif;
 }
 
 .socialMediaListItem {
