@@ -92,6 +92,9 @@ ul {
 .contactText {
     font-size: 18px;
     font-family: "Goudy Old Style", serif;
+    display: block;
+    float: right;
+    margin-left: 10px;
 }
 
 .socialMediaListItem {
@@ -119,6 +122,7 @@ ul {
 .fromTheCoupleMsg {
     font-family: "Goudy Old Style", cursive;
     font-weight: bold;
+    cursor: default;
 }
 
 /* End styling by class */
@@ -144,9 +148,9 @@ ul {
 #contactUsContainer {
     top: 10px;
     height: 220px;
-    width: 200px;
+    width: 230px;
     float: right;
-    margin: 0 15px 0 0;
+    margin: 0 5px 0 0;
     border-left: 6px solid #F08080;
 }
 
