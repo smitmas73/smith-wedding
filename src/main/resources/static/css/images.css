@@ -134,7 +134,7 @@ a:focus {
 
 #uploadImageMessage {
     font-size: 24px;
-    font-family: "Goudy Old Style", cursive;
+    font-family: "Goudy Old Style", fantasy;
     font-style: italic;
     font-weight: bold;
     margin-left: 15px;
@@ -153,7 +153,7 @@ a:focus {
 
 #chosenFile {
     font-size: 20px;
-    font-family: "Goudy Old Style", cursive;
+    font-family: "Goudy Old Style", fantasy;
     font-style: italic;
     margin-left: 15px;
     cursor: default;
