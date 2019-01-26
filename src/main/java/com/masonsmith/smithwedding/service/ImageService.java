@@ -22,7 +22,7 @@ public class ImageService {
      * Variables
      */
 
-    private static final String UPLOAD_DIRECTORY = "uploads";
+    private static final String UPLOAD_DIRECTORY = "src/main/resources/static/img/uploads";
 
     private final ImageRepository repository;
     private final ResourceLoader resourceLoader;
