@@ -1,75 +1,76 @@
 package com.masonsmith.smithwedding.data;
 
-import javax.persistence.Id;
+import java.time.OffsetDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.PrePersist;
-import java.time.OffsetDateTime;
 
 @Entity
 public class Image {
 
-    /**
-     * Variables
-     */
+  /**
+   * Variables
+   */
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
 
-    private String name;
+  private String name;
 
-    private OffsetDateTime uploadDate;
+  private OffsetDateTime uploadDate;
 
-    /**
-     * Constructors
-     */
+  /**
+   * Constructors
+   */
 
-    public Image() {}
+  public Image() {
+  }
 
-    public Image(String name) {
-        this.name = name;
-    }
+  public Image(String name) {
+    this.name = name;
+  }
 
-    /**
-     * Auditing methods
-     */
+  /**
+   * Auditing methods
+   */
 
-    @PrePersist
-    protected void onCreate() {
-        this.uploadDate = OffsetDateTime.now();
-    }
+  @PrePersist
+  protected void onCreate() {
+    this.uploadDate = OffsetDateTime.now();
+  }
 
-    /**
-     * Getters and Setters
-     */
+  /**
+   * Getters and Setters
+   */
 
-    public long getId() {
-        return id;
-    }
+  public long getId() {
+    return id;
+  }
 
-    public Image setId(long id) {
-        this.id = id;
-        return this;
-    }
+  public Image setId(long id) {
+    this.id = id;
+    return this;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public Image setName(String name) {
-        this.name = name;
-        return this;
-    }
+  public Image setName(String name) {
+    this.name = name;
+    return this;
+  }
 
-    public OffsetDateTime getUploadDate() {
-        return uploadDate;
-    }
+  public OffsetDateTime getUploadDate() {
+    return uploadDate;
+  }
 
-    public Image setUploadDate(OffsetDateTime uploadDate) {
-        this.uploadDate = uploadDate;
-        return this;
-    }
+  public Image setUploadDate(OffsetDateTime uploadDate) {
+    this.uploadDate = uploadDate;
+    return this;
+  }
 
 }
