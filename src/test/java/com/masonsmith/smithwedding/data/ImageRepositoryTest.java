@@ -15,16 +15,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class ImageRepositoryTest {
 
-    @Resource
-    private ImageRepository repository;
+  @Resource
+  private ImageRepository repository;
 
-    @Test
-    public void testSaveImage() {
-        Image image = new Image("test1");
-        repository.save(image);
+  @Test
+  public void testSaveImage() {
+    Image image = new Image("test1");
+    repository.save(image);
 
-        assertThat(repository.existsById(image.getId())).isTrue();
-        assertThat(repository.findImageByName("test1")).isNotNull();
-    }
+    assertThat(repository.existsById(image.getId())).isTrue();
+    assertThat(repository.findImageByName("test1")).isNotNull();
+  }
 
 }

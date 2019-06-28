@@ -1,32 +1,32 @@
 /* Start styling by class */
 
 .carousel-container {
-    border-top: 3px solid #FFFFFF;
-    height: 420px;
-    position: relative;
-    background: #FFFFFF;
-    overflow: hidden;
+  border-top: 3px solid #FFFFFF;
+  height: 420px;
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
 }
 
 .carousel-container:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background: url(../img/rose-assortment.png) no-repeat center center;
-    background-size: cover;
-    z-index: 0;
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: url(../img/rose-assortment.png) no-repeat center center;
+  background-size: cover;
+  z-index: 0;
 }
 
 .slides {
-    height: 280px;
-    margin-top: 50px;
-    text-align: center;
-    background: none;
-    position: relative;
-    z-index: 1;
+  height: 280px;
+  margin-top: 50px;
+  text-align: center;
+  background: none;
+  position: relative;
+  z-index: 1;
 }
 
 /* End styling by class */
@@ -34,21 +34,21 @@
 /* Start styling by id */
 
 #slider-header {
-    margin-top: 15px;
-    position: relative;
-    font-family: "Goudy Old Style", cursive;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 36px;
-    text-align: center;
-    z-index: 1;
-    cursor: default;
+  margin-top: 15px;
+  position: relative;
+  font-family: "Goudy Old Style", cursive;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  z-index: 1;
+  cursor: default;
 }
 
 #imageSlider {
-    width: 100%;
-    height: 420px;
-    position: absolute;
+  width: 100%;
+  height: 420px;
+  position: absolute;
 }
 
 /* End styling by id */

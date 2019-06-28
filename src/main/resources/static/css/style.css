@@ -1,128 +1,128 @@
 /* Start styling by class */
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .nav-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #F08080;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F08080;
 }
 
 .link-container {
-    float: left;
+  float: left;
 }
 
 .link {
-    font-family: "Goudy Old Style", cursive;
-    font-size: 24px;
-    color: #000000;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none !important;
-    -webkit-transition-duration: 0.25s;
+  font-family: "Goudy Old Style", cursive;
+  font-size: 24px;
+  color: #555555;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none !important;
+  -webkit-transition-duration: 0.25s;
 }
 
 .link:hover {
-    background-color: #F93333;
+  background-color: #F93333;
 }
 
 .active {
-    color: #555555;
+  color: #000000;
 }
 
 .nav-message {
-    font-family: "Goudy Old Style", cursive;
-    font-size: 24px;
-    color: #555555;
-    float: right;
-    margin: 15px 15px 0 0;
-    cursor: default;
+  font-family: "Goudy Old Style", cursive;
+  font-size: 24px;
+  color: #555555;
+  float: right;
+  margin: 15px 15px 0 0;
+  cursor: default;
 }
 
 .header-name {
-    font-size: 60px;
-    font-variant: small-caps;
-    font-family: "Goudy Old Style", fantasy;
-    font-weight: bold;
-    font-style: italic;
-    color: #FFFFFF;
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-    cursor: default;
+  font-size: 60px;
+  font-variant: small-caps;
+  font-family: "Goudy Old Style", fantasy;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFFFFF;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  cursor: default;
 }
 
 .header-date {
-    font-size: 40px;
-    font-family: "Goudy Old Style", cursive;
-    font-weight: bold;
-    font-style: italic;
-    color: #FFFFFF;
-    position: absolute;
-    top: 60%;
-    width: 100%;
-    text-align: center;
-    cursor: default;
+  font-size: 40px;
+  font-family: "Goudy Old Style", cursive;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFFFFF;
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: center;
+  cursor: default;
 }
 
 .header {
-    background: url(../img/engagement_6.JPG) no-repeat center center;
-    width: 100%;
-    height: 720px;
-    background-size: cover;
-    position: relative;
+  background: url(../img/engagement_6.JPG) no-repeat center center;
+  width: 100%;
+  height: 720px;
+  background-size: cover;
+  position: relative;
 }
 
 .footer {
-    background-color: #aaaaaa;
-    border-radius: 12px;
-    top: 10px;
-    width: 100%;
-    height: 220px;
-    position: relative;
-    margin: 10px 0 20px 0;
+  background-color: #aaaaaa;
+  border-radius: 12px;
+  top: 10px;
+  width: 100%;
+  height: 240px;
+  position: relative;
+  margin: 10px 0 20px 0;
 }
 
 .contactText {
-    font-size: 18px;
-    font-family: "Goudy Old Style", serif;
-    display: block;
-    float: right;
-    margin-left: 10px;
+  font-size: 18px;
+  font-family: "Goudy Old Style", serif;
+  display: block;
+  float: right;
+  margin-left: 10px;
 }
 
 .socialMediaListItem {
-    display: inline;
-    margin: 0 0 0 0;
+  display: inline;
+  margin: 0 0 0 0;
 }
 
 .socialMediaListItem a {
-    text-decoration: none;
-    width: 30px;
+  text-decoration: none;
+  width: 30px;
 }
 
 .socialMediaListItem a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .socialMediaListItem a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .socialMediaListItem img:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fromTheCoupleMsg {
-    font-family: "Goudy Old Style", cursive;
-    font-weight: bold;
-    cursor: default;
+  font-family: "Goudy Old Style", cursive;
+  font-weight: bold;
+  cursor: default;
 }
 
 /* End styling by class */
@@ -130,53 +130,53 @@ ul {
 /* Start styling by id */
 
 #footerLeft {
-    top: 10px;
-    float: left;
+  top: 10px;
+  float: left;
 }
 
 #footerLogoContainer {
-    position: absolute;
-    right: 25%;
-    top: 25%;
+  position: absolute;
+  right: 25%;
+  top: 25%;
 }
 
 #footerLogo {
-    width: 270px;
-    height: 77px;
+  width: 270px;
+  height: 77px;
 }
 
 #contactUsContainer {
-    top: 10px;
-    height: 220px;
-    width: 230px;
-    float: right;
-    margin: 0 5px 0 0;
-    border-left: 6px solid #F08080;
+  top: 10px;
+  height: 240px;
+  width: 230px;
+  float: right;
+  margin: 0 5px 0 0;
+  border-left: 6px solid #F08080;
 }
 
 #facebookLinkImg {
-    background: url(../img/facebook.png) no-repeat center center;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    margin: 10px 0 0 10px;
+  background: url(../img/facebook.png) no-repeat center center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 0 10px;
 }
 
 #twitterLinkImg {
-    background: url(../img/twitter.png) no-repeat center center;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    margin: 10px 0 0 10px;
+  background: url(../img/twitter.png) no-repeat center center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 0 10px;
 }
 
 #venmoLinkImg {
-    background: url(../img/venmo.jpg) no-repeat center center;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    margin: 10px 0 0 10px;
+  background: url(../img/venmo.jpg) no-repeat center center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  margin: 10px 0 0 10px;
 }
 
 /* End styling by id */
